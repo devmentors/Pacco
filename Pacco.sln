@@ -63,17 +63,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pacco.APIGateway", "Pacco.A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pacco.Services.Availability", "Pacco.Services.Availability", "{155C0EC7-5E7F-4E4A-896D-3C6939A7CFB2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pacco.Services.Customers.Api", "Pacco.Services.Customers.Api", "{E15D31BF-0EDA-4CC4-9A60-593120E68308}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pacco.Services.Customers", "Pacco.Services.Customers", "{E15D31BF-0EDA-4CC4-9A60-593120E68308}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pacco.Services.Deliveries", "Pacco.Services.Deliveries", "{114D012F-D88C-4AF8-A6EB-E888F746A994}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pacco.Services.Identity.Api", "Pacco.Services.Identity.Api", "{BD70E4D1-1DDE-4AD4-9A8E-9B80157AF7A4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pacco.Services.Identity", "Pacco.Services.Identity", "{BD70E4D1-1DDE-4AD4-9A8E-9B80157AF7A4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pacco.Services.Operations", "Pacco.Services.Operations", "{5B0AC0C4-336E-4052-9A64-5C62802BD02C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pacco.Services.Orders.Api", "Pacco.Services.Orders.Api", "{D42B6768-4B44-466D-8BE5-AC7C6B3D1AA6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pacco.Services.Orders", "Pacco.Services.Orders", "{D42B6768-4B44-466D-8BE5-AC7C6B3D1AA6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pacco.Services.Parcels.Api", "Pacco.Services.Parcels.Api", "{4A395D87-B108-42C9-9B30-4212AB85C567}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pacco.Services.Parcels", "Pacco.Services.Parcels", "{4A395D87-B108-42C9-9B30-4212AB85C567}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pacco.Services.Pricing", "Pacco.Services.Pricing", "{6BB2245D-82C5-47FF-ABD1-C99C32976B3D}"
 EndProject
