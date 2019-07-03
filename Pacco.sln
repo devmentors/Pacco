@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.APIGateway", "..\Pacco.APIGateway\src\Pacco.APIGateway\Pacco.APIGateway.csproj", "{D60E3F0B-0091-442B-8B4D-CBD65E25F1C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Availability", "..\Pacco.Services.Availability\src\Pacco.Services.Availability\Pacco.Services.Availability.csproj", "{ED9DCE31-4B0C-4CFA-893A-C6C5F6E974D3}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Customers.Api", "..\Pacco.Services.Customers\src\Pacco.Services.Customers.Api\Pacco.Services.Customers.Api.csproj", "{B1407433-CFE6-45B2-8D12-2270653514C6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Customers.Application", "..\Pacco.Services.Customers\src\Pacco.Services.Customers.Application\Pacco.Services.Customers.Application.csproj", "{F418C916-92CB-4760-AEB7-C513A081FFA8}"
@@ -21,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Deliveries.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Deliveries.Infrastructure", "..\Pacco.Services.Deliveries\src\Pacco.Services.Deliveries.Infrastructure\Pacco.Services.Deliveries.Infrastructure.csproj", "{15724989-96EF-4974-B80D-62AC27C70579}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Deliveries", "..\Pacco.Services.Deliveries\src\Pacco.Services.Deliveries\Pacco.Services.Deliveries.csproj", "{E74C4038-B1D0-4A80-89D0-9A7ED82C6396}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Deliveries.Api", "..\Pacco.Services.Deliveries\src\Pacco.Services.Deliveries.Api\Pacco.Services.Deliveries.Api.csproj", "{E74C4038-B1D0-4A80-89D0-9A7ED82C6396}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Identity.Api", "..\Pacco.Services.Identity\src\Pacco.Services.Identity.Api\Pacco.Services.Identity.Api.csproj", "{EC224C7F-7849-4F91-B121-B5FB6E6E0E65}"
 EndProject
@@ -31,7 +29,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Identity.Cor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Identity.Infrastructure", "..\Pacco.Services.Identity\src\Pacco.Services.Identity.Infrastructure\Pacco.Services.Identity.Infrastructure.csproj", "{1F4D2D05-A491-49FF-95BB-5BC6AB42E60F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Operations", "..\Pacco.Services.Operations\src\Pacco.Services.Operations\Pacco.Services.Operations.csproj", "{1BCB68C2-7052-4C38-9F79-D4DD8D59A02D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Operations.Api", "..\Pacco.Services.Operations\src\Pacco.Services.Operations.Api\Pacco.Services.Operations.Api.csproj", "{1BCB68C2-7052-4C38-9F79-D4DD8D59A02D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Orders.Api", "..\Pacco.Services.Orders\src\Pacco.Services.Orders.Api\Pacco.Services.Orders.Api.csproj", "{179691D1-05B6-49F1-BBC4-AD4133B7A7B9}"
 EndProject
@@ -49,7 +47,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Parcels.Core
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Parcels.Infrastructure", "..\Pacco.Services.Parcels\src\Pacco.Services.Parcels.Infrastructure\Pacco.Services.Parcels.Infrastructure.csproj", "{C67699A6-5094-45C1-82BA-B6EC891F5A6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Pricing", "..\Pacco.Services.Pricing\src\Pacco.Services.Pricing\Pacco.Services.Pricing.csproj", "{72EBB611-F6B4-436E-8D2F-72B259F418D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Pricing.Api", "..\Pacco.Services.Pricing\src\Pacco.Services.Pricing.Api\Pacco.Services.Pricing.Api.csproj", "{72EBB611-F6B4-436E-8D2F-72B259F418D5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Vehicles.Application", "..\Pacco.Services.Vehicles\src\Pacco.Services.Vehicles.Application\Pacco.Services.Vehicles.Application.csproj", "{9D680611-CF14-472F-B525-E9310173B333}"
 EndProject
@@ -57,11 +55,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Vehicles.Cor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Vehicles.Infrastructure", "..\Pacco.Services.Vehicles\src\Pacco.Services.Vehicles.Infrastructure\Pacco.Services.Vehicles.Infrastructure.csproj", "{7DE3A9F9-D7FF-4ABC-A02C-B66422E3A999}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Vehicles", "..\Pacco.Services.Vehicles\src\Pacco.Services.Vehicles\Pacco.Services.Vehicles.csproj", "{25A54B50-9BC7-4DA7-BB41-43AF52B910E0}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pacco.APIGateway", "Pacco.APIGateway", "{448D723B-5318-4EBF-8050-96FAEF05FB65}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pacco.Services.Availability", "Pacco.Services.Availability", "{155C0EC7-5E7F-4E4A-896D-3C6939A7CFB2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pacco.Services.Customers", "Pacco.Services.Customers", "{E15D31BF-0EDA-4CC4-9A60-593120E68308}"
 EndProject
@@ -78,6 +72,18 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pacco.Services.Pricing", "Pacco.Services.Pricing", "{6BB2245D-82C5-47FF-ABD1-C99C32976B3D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pacco.Services.Vehicles", "Pacco.Services.Vehicles", "{EAB2B57F-7E18-4E4D-AD10-19BDBC3232F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Availability.Api", "..\Pacco.Services.Availability\src\Pacco.Services.Availability.Api\Pacco.Services.Availability.Api.csproj", "{B959896E-846B-4D5D-AD23-552620356516}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Availability.Application", "..\Pacco.Services.Availability\src\Pacco.Services.Availability.Application\Pacco.Services.Availability.Application.csproj", "{F6683CEE-D42A-4979-8F87-F2648B5B4A9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Availability.Core", "..\Pacco.Services.Availability\src\Pacco.Services.Availability.Core\Pacco.Services.Availability.Core.csproj", "{581C243A-7D71-4595-83B6-76400FECD1FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Availability.Infrastructure", "..\Pacco.Services.Availability\src\Pacco.Services.Availability.Infrastructure\Pacco.Services.Availability.Infrastructure.csproj", "{0CBA61B8-EBA0-43CA-A98F-42DBA22F60DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pacco.Services.Availability", "Pacco.Services.Availability", "{175382DE-404D-4400-AEC7-F7F8A15C7766}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Vehicles.Api", "..\Pacco.Services.Vehicles\src\Pacco.Services.Vehicles.Api\Pacco.Services.Vehicles.Api.csproj", "{66B293E2-AD53-4B0C-BBD8-F66AA0742F69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -104,18 +110,6 @@ Global
 		{D60E3F0B-0091-442B-8B4D-CBD65E25F1C4}.Release|x64.Build.0 = Release|Any CPU
 		{D60E3F0B-0091-442B-8B4D-CBD65E25F1C4}.Release|x86.ActiveCfg = Release|Any CPU
 		{D60E3F0B-0091-442B-8B4D-CBD65E25F1C4}.Release|x86.Build.0 = Release|Any CPU
-		{ED9DCE31-4B0C-4CFA-893A-C6C5F6E974D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ED9DCE31-4B0C-4CFA-893A-C6C5F6E974D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ED9DCE31-4B0C-4CFA-893A-C6C5F6E974D3}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{ED9DCE31-4B0C-4CFA-893A-C6C5F6E974D3}.Debug|x64.Build.0 = Debug|Any CPU
-		{ED9DCE31-4B0C-4CFA-893A-C6C5F6E974D3}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{ED9DCE31-4B0C-4CFA-893A-C6C5F6E974D3}.Debug|x86.Build.0 = Debug|Any CPU
-		{ED9DCE31-4B0C-4CFA-893A-C6C5F6E974D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ED9DCE31-4B0C-4CFA-893A-C6C5F6E974D3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ED9DCE31-4B0C-4CFA-893A-C6C5F6E974D3}.Release|x64.ActiveCfg = Release|Any CPU
-		{ED9DCE31-4B0C-4CFA-893A-C6C5F6E974D3}.Release|x64.Build.0 = Release|Any CPU
-		{ED9DCE31-4B0C-4CFA-893A-C6C5F6E974D3}.Release|x86.ActiveCfg = Release|Any CPU
-		{ED9DCE31-4B0C-4CFA-893A-C6C5F6E974D3}.Release|x86.Build.0 = Release|Any CPU
 		{B1407433-CFE6-45B2-8D12-2270653514C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B1407433-CFE6-45B2-8D12-2270653514C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1407433-CFE6-45B2-8D12-2270653514C6}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -416,22 +410,69 @@ Global
 		{7DE3A9F9-D7FF-4ABC-A02C-B66422E3A999}.Release|x64.Build.0 = Release|Any CPU
 		{7DE3A9F9-D7FF-4ABC-A02C-B66422E3A999}.Release|x86.ActiveCfg = Release|Any CPU
 		{7DE3A9F9-D7FF-4ABC-A02C-B66422E3A999}.Release|x86.Build.0 = Release|Any CPU
-		{25A54B50-9BC7-4DA7-BB41-43AF52B910E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{25A54B50-9BC7-4DA7-BB41-43AF52B910E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{25A54B50-9BC7-4DA7-BB41-43AF52B910E0}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{25A54B50-9BC7-4DA7-BB41-43AF52B910E0}.Debug|x64.Build.0 = Debug|Any CPU
-		{25A54B50-9BC7-4DA7-BB41-43AF52B910E0}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{25A54B50-9BC7-4DA7-BB41-43AF52B910E0}.Debug|x86.Build.0 = Debug|Any CPU
-		{25A54B50-9BC7-4DA7-BB41-43AF52B910E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{25A54B50-9BC7-4DA7-BB41-43AF52B910E0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{25A54B50-9BC7-4DA7-BB41-43AF52B910E0}.Release|x64.ActiveCfg = Release|Any CPU
-		{25A54B50-9BC7-4DA7-BB41-43AF52B910E0}.Release|x64.Build.0 = Release|Any CPU
-		{25A54B50-9BC7-4DA7-BB41-43AF52B910E0}.Release|x86.ActiveCfg = Release|Any CPU
-		{25A54B50-9BC7-4DA7-BB41-43AF52B910E0}.Release|x86.Build.0 = Release|Any CPU
+		{B959896E-846B-4D5D-AD23-552620356516}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B959896E-846B-4D5D-AD23-552620356516}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B959896E-846B-4D5D-AD23-552620356516}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B959896E-846B-4D5D-AD23-552620356516}.Debug|x64.Build.0 = Debug|Any CPU
+		{B959896E-846B-4D5D-AD23-552620356516}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B959896E-846B-4D5D-AD23-552620356516}.Debug|x86.Build.0 = Debug|Any CPU
+		{B959896E-846B-4D5D-AD23-552620356516}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B959896E-846B-4D5D-AD23-552620356516}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B959896E-846B-4D5D-AD23-552620356516}.Release|x64.ActiveCfg = Release|Any CPU
+		{B959896E-846B-4D5D-AD23-552620356516}.Release|x64.Build.0 = Release|Any CPU
+		{B959896E-846B-4D5D-AD23-552620356516}.Release|x86.ActiveCfg = Release|Any CPU
+		{B959896E-846B-4D5D-AD23-552620356516}.Release|x86.Build.0 = Release|Any CPU
+		{F6683CEE-D42A-4979-8F87-F2648B5B4A9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6683CEE-D42A-4979-8F87-F2648B5B4A9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6683CEE-D42A-4979-8F87-F2648B5B4A9F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F6683CEE-D42A-4979-8F87-F2648B5B4A9F}.Debug|x64.Build.0 = Debug|Any CPU
+		{F6683CEE-D42A-4979-8F87-F2648B5B4A9F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F6683CEE-D42A-4979-8F87-F2648B5B4A9F}.Debug|x86.Build.0 = Debug|Any CPU
+		{F6683CEE-D42A-4979-8F87-F2648B5B4A9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6683CEE-D42A-4979-8F87-F2648B5B4A9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6683CEE-D42A-4979-8F87-F2648B5B4A9F}.Release|x64.ActiveCfg = Release|Any CPU
+		{F6683CEE-D42A-4979-8F87-F2648B5B4A9F}.Release|x64.Build.0 = Release|Any CPU
+		{F6683CEE-D42A-4979-8F87-F2648B5B4A9F}.Release|x86.ActiveCfg = Release|Any CPU
+		{F6683CEE-D42A-4979-8F87-F2648B5B4A9F}.Release|x86.Build.0 = Release|Any CPU
+		{581C243A-7D71-4595-83B6-76400FECD1FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{581C243A-7D71-4595-83B6-76400FECD1FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{581C243A-7D71-4595-83B6-76400FECD1FE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{581C243A-7D71-4595-83B6-76400FECD1FE}.Debug|x64.Build.0 = Debug|Any CPU
+		{581C243A-7D71-4595-83B6-76400FECD1FE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{581C243A-7D71-4595-83B6-76400FECD1FE}.Debug|x86.Build.0 = Debug|Any CPU
+		{581C243A-7D71-4595-83B6-76400FECD1FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{581C243A-7D71-4595-83B6-76400FECD1FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{581C243A-7D71-4595-83B6-76400FECD1FE}.Release|x64.ActiveCfg = Release|Any CPU
+		{581C243A-7D71-4595-83B6-76400FECD1FE}.Release|x64.Build.0 = Release|Any CPU
+		{581C243A-7D71-4595-83B6-76400FECD1FE}.Release|x86.ActiveCfg = Release|Any CPU
+		{581C243A-7D71-4595-83B6-76400FECD1FE}.Release|x86.Build.0 = Release|Any CPU
+		{0CBA61B8-EBA0-43CA-A98F-42DBA22F60DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CBA61B8-EBA0-43CA-A98F-42DBA22F60DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CBA61B8-EBA0-43CA-A98F-42DBA22F60DF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0CBA61B8-EBA0-43CA-A98F-42DBA22F60DF}.Debug|x64.Build.0 = Debug|Any CPU
+		{0CBA61B8-EBA0-43CA-A98F-42DBA22F60DF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0CBA61B8-EBA0-43CA-A98F-42DBA22F60DF}.Debug|x86.Build.0 = Debug|Any CPU
+		{0CBA61B8-EBA0-43CA-A98F-42DBA22F60DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CBA61B8-EBA0-43CA-A98F-42DBA22F60DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CBA61B8-EBA0-43CA-A98F-42DBA22F60DF}.Release|x64.ActiveCfg = Release|Any CPU
+		{0CBA61B8-EBA0-43CA-A98F-42DBA22F60DF}.Release|x64.Build.0 = Release|Any CPU
+		{0CBA61B8-EBA0-43CA-A98F-42DBA22F60DF}.Release|x86.ActiveCfg = Release|Any CPU
+		{0CBA61B8-EBA0-43CA-A98F-42DBA22F60DF}.Release|x86.Build.0 = Release|Any CPU
+		{66B293E2-AD53-4B0C-BBD8-F66AA0742F69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66B293E2-AD53-4B0C-BBD8-F66AA0742F69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66B293E2-AD53-4B0C-BBD8-F66AA0742F69}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{66B293E2-AD53-4B0C-BBD8-F66AA0742F69}.Debug|x64.Build.0 = Debug|Any CPU
+		{66B293E2-AD53-4B0C-BBD8-F66AA0742F69}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{66B293E2-AD53-4B0C-BBD8-F66AA0742F69}.Debug|x86.Build.0 = Debug|Any CPU
+		{66B293E2-AD53-4B0C-BBD8-F66AA0742F69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66B293E2-AD53-4B0C-BBD8-F66AA0742F69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66B293E2-AD53-4B0C-BBD8-F66AA0742F69}.Release|x64.ActiveCfg = Release|Any CPU
+		{66B293E2-AD53-4B0C-BBD8-F66AA0742F69}.Release|x64.Build.0 = Release|Any CPU
+		{66B293E2-AD53-4B0C-BBD8-F66AA0742F69}.Release|x86.ActiveCfg = Release|Any CPU
+		{66B293E2-AD53-4B0C-BBD8-F66AA0742F69}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D60E3F0B-0091-442B-8B4D-CBD65E25F1C4} = {448D723B-5318-4EBF-8050-96FAEF05FB65}
-		{ED9DCE31-4B0C-4CFA-893A-C6C5F6E974D3} = {155C0EC7-5E7F-4E4A-896D-3C6939A7CFB2}
 		{F418C916-92CB-4760-AEB7-C513A081FFA8} = {E15D31BF-0EDA-4CC4-9A60-593120E68308}
 		{B1407433-CFE6-45B2-8D12-2270653514C6} = {E15D31BF-0EDA-4CC4-9A60-593120E68308}
 		{AE6E3714-3E0F-4995-99D6-B52B7873430F} = {E15D31BF-0EDA-4CC4-9A60-593120E68308}
@@ -454,9 +495,13 @@ Global
 		{B00E40C7-D6AC-4063-BB4F-8EAECD00012E} = {4A395D87-B108-42C9-9B30-4212AB85C567}
 		{BDCC24F0-1FC8-4295-8DB9-F7364FC44BFF} = {4A395D87-B108-42C9-9B30-4212AB85C567}
 		{72EBB611-F6B4-436E-8D2F-72B259F418D5} = {6BB2245D-82C5-47FF-ABD1-C99C32976B3D}
-		{25A54B50-9BC7-4DA7-BB41-43AF52B910E0} = {EAB2B57F-7E18-4E4D-AD10-19BDBC3232F1}
 		{9D680611-CF14-472F-B525-E9310173B333} = {EAB2B57F-7E18-4E4D-AD10-19BDBC3232F1}
 		{423A6CA2-10E6-438A-9598-6D814D95CFC6} = {EAB2B57F-7E18-4E4D-AD10-19BDBC3232F1}
 		{7DE3A9F9-D7FF-4ABC-A02C-B66422E3A999} = {EAB2B57F-7E18-4E4D-AD10-19BDBC3232F1}
+		{B959896E-846B-4D5D-AD23-552620356516} = {175382DE-404D-4400-AEC7-F7F8A15C7766}
+		{F6683CEE-D42A-4979-8F87-F2648B5B4A9F} = {175382DE-404D-4400-AEC7-F7F8A15C7766}
+		{581C243A-7D71-4595-83B6-76400FECD1FE} = {175382DE-404D-4400-AEC7-F7F8A15C7766}
+		{0CBA61B8-EBA0-43CA-A98F-42DBA22F60DF} = {175382DE-404D-4400-AEC7-F7F8A15C7766}
+		{66B293E2-AD53-4B0C-BBD8-F66AA0742F69} = {EAB2B57F-7E18-4E4D-AD10-19BDBC3232F1}
 	EndGlobalSection
 EndGlobal
