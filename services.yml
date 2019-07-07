@@ -1,0 +1,31 @@
+apps:
+  - name: API
+    script: dotnet run
+    cwd: ../Pacco.APIGateway/src/Pacco.APIGateway
+  - name: Availability
+    script: dotnet run
+    cwd: ../Pacco.Services.Availability/src/Pacco.Services.Availability.Api
+  - name: Customers
+    script: dotnet run
+    cwd: ../Pacco.Services.Customers/src/Pacco.Services.Customers.Api
+  - name: Deliveries
+    script: dotnet run
+    cwd: ../Pacco.Services.Deliveries/src/Pacco.Services.Deliveries.Api
+  - name: Identity
+    script: dotnet run
+    cwd: ../Pacco.Services.Identity/src/Pacco.Services.Identity.Api
+  - name: Operations
+    script: dotnet run
+    cwd: ../Pacco.Services.Operations/src/Pacco.Services.Operations.Api
+  - name: Orders
+    script: dotnet run
+    cwd: ../Pacco.Services.Orders/src/Pacco.Services.Orders.Api
+  - name: Parcels
+    script: dotnet run
+    cwd: ../Pacco.Services.Parcels/src/Pacco.Services.Parcels.Api
+  - name: Pricing
+    script: dotnet run
+    cwd: ../Pacco.Services.Pricing/src/Pacco.Services.Pricing.Api
+  - name: Vehicles
+    script: dotnet run
+    cwd: ../Pacco.Services.Vehicles/src/Pacco.Services.Vehicles.Api
