@@ -9,40 +9,40 @@ scrape_configs:
 
   - job_name: 'api'
     static_configs:
-      - targets: ['api:5000']
+      - targets: ['localhost:5000']
 
   - job_name: 'availability-service'
     static_configs:
-      - targets: ['availability-service:5000']
+      - targets: ['localhost:5001']
 
   - job_name: 'customers-service'
     static_configs:
-      - targets: ['customers-service:5000']
+      - targets: ['localhost:5002']
 
   - job_name: 'deliveries-service'
     static_configs:
-      - targets: ['deliveries-service:5000']
+      - targets: ['localhost:5003']
 
   - job_name: 'identity-service'
     static_configs:
-      - targets: ['identity-service:5000']
+      - targets: ['localhost:5004']
 
   - job_name: 'operations-service'
     static_configs:
-      - targets: ['operations-service:5000']
+      - targets: ['localhost:5005']
 
   - job_name: 'orders-service'
     static_configs:
-      - targets: ['orders-service:5000']
+      - targets: ['localhost:5006']
 
   - job_name: 'parcels-service'
     static_configs:
-      - targets: ['parcels-service:5000']
+      - targets: ['localhost:5007']
       
   - job_name: 'pricing-service'
     static_configs:
-      - targets: ['pricing-service:5000']
+      - targets: ['localhost:5008']
 
   - job_name: 'vehicles-service'
     static_configs:
-      - targets: ['vehicles-service:5000']
+      - targets: ['localhost:5009']

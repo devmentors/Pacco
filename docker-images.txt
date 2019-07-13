@@ -77,7 +77,7 @@ docker run --name mongo-express -d -p 8081:8081 mongo-express
 
 -e ME_CONFIG_MONGODB_ADMINUSERNAME=user -e ME_CONFIG_MONGODB_ADMINPASSWORD=secret
 
---network dshop-network
+--network pacco-network
 
 
 ===========================================================================================================================
@@ -145,7 +145,7 @@ docker run -it --rm redis redis-cli -h redis -p 6379
 
 --- Optional ---
 
---network dshop-network
+--network pacco-network
 
 ===========================================================================================================================
 *** SERVICE DISCOVERY ***

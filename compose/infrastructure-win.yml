@@ -1,0 +1,145 @@
+version: "3.5"
+
+services:
+  consul:
+    image: consul
+    container_name: consul
+    restart: always
+    ports:
+      - 8500:8500
+    networks:
+      - pacco
+    volumes:
+      - consul:/consul/data
+
+  fabio:
+    image: fabiolb/fabio
+    container_name: fabio
+    restart: always
+    environment:
+    - FABIO_REGISTRY_CONSUL_ADDR=consul:8500
+    networks:
+      - pacco
+    ports:
+    - 9998:9998
+    - 9999:9999
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - pacco
+    volumes:
+      - grafana:/var/lib/grafana
+
+  jaeger:
+    image: jaegertracing/all-in-one
+    container_name: jaeger
+    restart: always
+    ports:
+      - 5775:5775/udp
+      - 5778:5778
+      - 6831:6831/udp
+      - 6832:6832/udp
+      - 9411:9411
+      - 14268:14268
+      - 16686:16686
+    networks:
+      - pacco
+
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    networks:
+      - pacco
+    volumes:
+      - mongo:/data/db
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    restart: always
+    ports:
+      - '9090:9090'
+    networks:
+      - pacco
+    volumes:
+      - prometheus:/prometheus
+      - ${PWD}/prometheus-win.yml:/etc/prometheus/prometheus.yml
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    restart: always
+    ports:
+      - 5672:5672
+      - 15672:15672
+    networks:
+      - pacco
+    volumes: 
+      - rabbitmq:/var/lib/rabbitmq
+
+  redis:
+    image: redis
+    container_name: redis
+    restart: always
+    ports:
+      - 6379:6379
+    networks:
+      - pacco
+    volumes: 
+      - redis:/data
+
+  seq:
+    image: datalust/seq 
+    container_name: seq
+    restart: always
+    environment:
+      - ACCEPT_EULA=Y
+    ports:
+      - 5341:80
+    networks:
+      - pacco
+    volumes: 
+      - seq:/data
+
+  vault:
+    image: vault
+    container_name: vault
+    restart: always
+    ports:
+      - 8200:8200
+    networks:
+      - pacco
+    environment:
+      - VAULT_ADDR=http://127.0.0.1:8200
+      - VAULT_DEV_ROOT_TOKEN_ID=secret
+    cap_add:
+      - IPC_LOCK
+
+networks:
+  pacco:
+    name: pacco-network
+
+volumes:
+  consul:
+    driver: local
+  grafana:
+    driver: local
+  mongo:
+    driver: local
+  prometheus:
+    driver: local
+  rabbitmq:
+    driver: local
+  redis:
+    driver: local
+  seq:
+    driver: local
+  

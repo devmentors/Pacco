@@ -7,8 +7,7 @@ services:
     ports:
       - 27017:27017
     networks:
-      - dshop
-    # network_mode: host
+      - pacco
     volumes:
       - mongo:/data/db
 
@@ -19,8 +18,7 @@ services:
       - 5672:5672
       - 15672:15672
     networks:
-      - dshop
-    # network_mode: host
+      - pacco
     volumes: 
       - rabbitmq:/var/lib/rabbitmq
 
@@ -30,14 +28,13 @@ services:
     ports:
       - 6379:6379
     networks:
-      - dshop
-    # network_mode: host
+      - pacco
     volumes: 
       - redis:/data
 
 networks:
-  dshop:
-    name: dshop-network
+  pacco:
+    name: pacco-network
 
 volumes:
   mongo:

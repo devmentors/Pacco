@@ -7,21 +7,9 @@ services:
     ports:
       - 3000:3000
     networks:
-      - dshop
-    # network_mode: host
+      - pacco
     volumes:
       - grafana:/var/lib/grafana
-
-  influxdb:
-    image: influxdb
-    container_name: influxdb
-    ports:
-      - '8086:8086'
-    networks:
-      - dshop
-    # network_mode: host
-    volumes:
-      - influxdb:/var/lib/influxdb
 
   prometheus:
     image: prom/prometheus
@@ -29,15 +17,29 @@ services:
     ports:
       - '9090:9090'
     networks:
-      - dshop
-    # network_mode: host
+      - pacco
     volumes:
       - prometheus:/prometheus
       - ${PWD}/prometheus.yml:/etc/prometheus/prometheus.yml
 
+  jaeger:
+    image: jaegertracing/all-in-one
+    container_name: jaeger
+    restart: always
+    ports:
+      - 5775:5775/udp
+      - 5778:5778
+      - 6831:6831/udp
+      - 6832:6832/udp
+      - 9411:9411
+      - 14268:14268
+      - 16686:16686
+    networks:
+      - pacco
+
 networks:
-  dshop:
-    name: dshop-network
+  pacco:
+    name: pacco
     external: true
 
 volumes:

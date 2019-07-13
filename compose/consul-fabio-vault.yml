@@ -7,8 +7,7 @@ services:
     ports:
       - 8500:8500
     networks:
-      - dshop
-    # network_mode: host
+      - pacco
     volumes:
       - consul:/consul/data
 
@@ -18,8 +17,7 @@ services:
     environment:
     - FABIO_REGISTRY_CONSUL_ADDR=consul:8500
     networks:
-      - dshop
-    # network_mode: host
+      - pacco
     ports:
     - 9998:9998
     - 9999:9999
@@ -30,8 +28,7 @@ services:
     ports:
       - 8200:8200
     networks:
-      - dshop
-    # network_mode: host
+      - pacco
     environment:
       - VAULT_ADDR=http://127.0.0.1:8200
       - VAULT_DEV_ROOT_TOKEN_ID=secret
@@ -39,8 +36,8 @@ services:
       - IPC_LOCK
 
 networks:
-  dshop:
-    name: dshop-network
+  pacco:
+    name: pacco-network
     external: true
 
 volumes:

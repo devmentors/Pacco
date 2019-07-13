@@ -7,5 +7,5 @@ do
 	 echo ========================================================
 	 REPO_URL=https://github.com/devmentors/$REPOSITORY.git
 	 git clone $REPO_URL
-	 cd $REPOSITORY && git checkout workshops && cd ..
+	 cd $REPOSITORY && cd ..
 done

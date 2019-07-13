@@ -8,8 +8,7 @@ services:
     ports:
       - 8500:8500
     networks:
-      - dshop
-    # network_mode: host
+      - pacco
     volumes:
       - consul:/consul/data
 
@@ -20,8 +19,7 @@ services:
     environment:
     - FABIO_REGISTRY_CONSUL_ADDR=consul:8500
     networks:
-      - dshop
-    # network_mode: host
+      - pacco
     ports:
     - 9998:9998
     - 9999:9999
@@ -33,22 +31,9 @@ services:
     ports:
       - 3000:3000
     networks:
-      - dshop
-    # network_mode: host
+      - pacco
     volumes:
       - grafana:/var/lib/grafana
-
-  influxdb:
-    image: influxdb
-    container_name: influxdb
-    restart: always
-    ports:
-      - 8086:8086
-    networks:
-      - dshop
-    # network_mode: host
-    volumes:
-      - influxdb:/var/lib/influxdb
 
   jaeger:
     image: jaegertracing/all-in-one
@@ -63,8 +48,7 @@ services:
       - 14268:14268
       - 16686:16686
     networks:
-      - dshop
-    # network_mode: host
+      - pacco
 
   mongo:
     image: mongo
@@ -73,8 +57,7 @@ services:
     ports:
       - 27017:27017
     networks:
-      - dshop
-    # network_mode: host
+      - pacco
     volumes:
       - mongo:/data/db
 
@@ -85,11 +68,10 @@ services:
     ports:
       - '9090:9090'
     networks:
-      - dshop
-    # network_mode: host
+      - pacco
     volumes:
       - prometheus:/prometheus
-      - ${PWD}/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ${PWD}/prometheus-osx.yml:/etc/prometheus/prometheus.yml
 
   rabbitmq:
     image: rabbitmq:3-management
@@ -99,8 +81,7 @@ services:
       - 5672:5672
       - 15672:15672
     networks:
-      - dshop
-    # network_mode: host
+      - pacco
     volumes: 
       - rabbitmq:/var/lib/rabbitmq
 
@@ -111,8 +92,7 @@ services:
     ports:
       - 6379:6379
     networks:
-      - dshop
-    # network_mode: host
+      - pacco
     volumes: 
       - redis:/data
 
@@ -125,8 +105,7 @@ services:
     ports:
       - 5341:80
     networks:
-      - dshop
-    # network_mode: host
+      - pacco
     volumes: 
       - seq:/data
 
@@ -137,8 +116,7 @@ services:
     ports:
       - 8200:8200
     networks:
-      - dshop
-    # network_mode: host
+      - pacco
     environment:
       - VAULT_ADDR=http://127.0.0.1:8200
       - VAULT_DEV_ROOT_TOKEN_ID=secret
@@ -146,15 +124,13 @@ services:
       - IPC_LOCK
 
 networks:
-  dshop:
-    name: dshop-network
+  pacco:
+    name: pacco-network
 
 volumes:
   consul:
     driver: local
   grafana:
-    driver: local
-  influxdb:
     driver: local
   mongo:
     driver: local
