@@ -113,10 +113,6 @@ services:
     cap_add:
       - IPC_LOCK
 
-networks:
-  pacco:
-    name: pacco-network
-
 volumes:
   consul:
     driver: local
