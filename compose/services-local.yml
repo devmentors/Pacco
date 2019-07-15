@@ -1,0 +1,99 @@
+version: "3.5"
+
+services:
+  api:
+    build: ../../Pacco.APIGateway
+    container_name: api
+    restart: always
+    environment:
+      NTRADA_CONFIG: ntrada.docker
+    ports:
+      - 5000:5000
+    networks:
+      - pacco
+
+  availability-service:
+    build: ../../Pacco.Services.Availability
+    container_name: availability-service
+    restart: always
+    ports:
+      - 5001:5000 
+    networks:
+      - pacco
+
+  customers-service:
+    build: ../../Pacco.Services.Customers
+    container_name: customers-service
+    restart: always
+    ports:
+      - 5002:5000
+    networks:
+      - pacco
+
+  deliveries-service:
+    build: ../../Pacco.Services.Deliveries
+    container_name: deliveries-service
+    restart: always
+    ports:
+      - 5003:5000
+    networks:
+      - pacco
+
+  identity-service:
+    build: ../../Pacco.Services.Identity
+    container_name: identity-service
+    restart: always
+    ports:
+      - 5004:5000
+    networks:
+      - pacco
+
+  operations-service:
+    build: ../../Pacco.Services.Operations
+    container_name: operations-service
+    restart: always
+    ports:
+      - 5005:5000
+    networks:
+      - pacco
+
+  orders-service:
+    build: ../../Pacco.Services.Orders
+    container_name: orders-service
+    restart: always
+    ports:
+      - 5006:5000
+    networks:
+      - pacco
+
+  parcels-service:
+    build: ../../Pacco.Services.Parcels
+    container_name: parcels-service
+    restart: always
+    ports:
+      - 5007:5000
+    networks:
+      - pacco
+
+  pricing-service:
+    build: ../../Pacco.Services.Pricing
+    container_name: pricing-service
+    restart: always
+    ports:
+      - 5008:5000
+    networks:
+      - pacco
+
+  vehicles-service:
+    build: ../../Pacco.Services.Vehicles
+    container_name: vehicles-service
+    restart: always
+    ports:
+      - 5009:5000
+    networks:
+      - pacco
+
+networks:
+  pacco:
+    name: pacco-network
+    external: true
