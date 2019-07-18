@@ -62,7 +62,7 @@ services:
       - mongo:/data/db
 
   prometheus:
-    image: prom/prometheus
+    build: ./prometheus
     container_name: prometheus
     restart: always
     ports:
@@ -71,7 +71,6 @@ services:
       - pacco
     volumes:
       - prometheus:/prometheus
-      - ${PWD}/prometheus.yml:/etc/prometheus/prometheus.yml
 
   rabbitmq:
     image: rabbitmq:3-management
