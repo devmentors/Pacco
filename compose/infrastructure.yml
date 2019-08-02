@@ -4,7 +4,7 @@ services:
   consul:
     image: consul
     container_name: consul
-    restart: always
+    restart: unless-stopped
     ports:
       - 8500:8500
     networks:
@@ -15,7 +15,7 @@ services:
   fabio:
     image: fabiolb/fabio
     container_name: fabio
-    restart: always
+    restart: unless-stopped
     environment:
     - FABIO_REGISTRY_CONSUL_ADDR=consul:8500
     networks:
@@ -27,7 +27,7 @@ services:
   grafana:
     image: grafana/grafana
     container_name: grafana
-    restart: always
+    restart: unless-stopped
     ports:
       - 3000:3000
     networks:
@@ -38,7 +38,7 @@ services:
   jaeger:
     image: jaegertracing/all-in-one
     container_name: jaeger
-    restart: always
+    restart: unless-stopped
     ports:
       - 5775:5775/udp
       - 5778:5778
@@ -53,7 +53,7 @@ services:
   mongo:
     image: mongo
     container_name: mongo
-    restart: always
+    restart: unless-stopped
     ports:
       - 27017:27017
     networks:
@@ -64,7 +64,7 @@ services:
   prometheus:
     build: ./prometheus
     container_name: prometheus
-    restart: always
+    restart: unless-stopped
     ports:
       - '9090:9090'
     networks:
@@ -75,7 +75,7 @@ services:
   rabbitmq:
     image: rabbitmq:3-management
     container_name: rabbitmq
-    restart: always
+    restart: unless-stopped
     ports:
       - 5672:5672
       - 15672:15672
@@ -87,7 +87,7 @@ services:
   redis:
     image: redis
     container_name: redis
-    restart: always
+    restart: unless-stopped
     ports:
       - 6379:6379
     networks:
@@ -98,7 +98,7 @@ services:
   seq:
     image: datalust/seq 
     container_name: seq
-    restart: always
+    restart: unless-stopped
     environment:
       - ACCEPT_EULA=Y
     ports:
@@ -111,7 +111,7 @@ services:
   vault:
     image: vault
     container_name: vault
-    restart: always
+    restart: unless-stopped
     ports:
       - 8200:8200
     networks:

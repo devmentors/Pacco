@@ -4,6 +4,7 @@ services:
   consul:
     image: consul
     container_name: consul
+    restart: unless-stopped
     ports:
       - 8500:8500
     networks:
@@ -14,6 +15,7 @@ services:
   fabio:
     image: fabiolb/fabio
     container_name: fabio
+    restart: unless-stopped
     environment:
     - FABIO_REGISTRY_CONSUL_ADDR=consul:8500
     networks:
@@ -25,6 +27,7 @@ services:
   vault:
     image: vault
     container_name: vault
+    restart: unless-stopped
     ports:
       - 8200:8200
     networks:

@@ -4,6 +4,7 @@ services:
   mongo:
     image: mongo:4
     container_name: mongo
+    restart: unless-stopped
     ports:
       - 27017:27017
     networks:
@@ -14,6 +15,7 @@ services:
   rabbitmq:
     image: rabbitmq:3-management
     container_name: rabbitmq
+    restart: unless-stopped
     ports:
       - 5672:5672
       - 15672:15672
@@ -25,6 +27,7 @@ services:
   redis:
     image: redis
     container_name: redis
+    restart: unless-stopped
     ports:
       - 6379:6379
     networks:

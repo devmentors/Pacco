@@ -4,6 +4,7 @@ services:
   grafana:
     image: grafana/grafana
     container_name: grafana
+    restart: unless-stopped
     ports:
       - 3000:3000
     networks:
@@ -14,6 +15,7 @@ services:
   prometheus:
     image: prom/prometheus
     container_name: prometheus
+    restart: unless-stopped
     ports:
       - '9090:9090'
     networks:
@@ -25,7 +27,7 @@ services:
   jaeger:
     image: jaegertracing/all-in-one
     container_name: jaeger
-    restart: always
+    restart: unless-stopped
     ports:
       - 5775:5775/udp
       - 5778:5778
