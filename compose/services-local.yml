@@ -66,6 +66,15 @@ services:
     networks:
       - pacco
 
+  ordermaker-service:
+    build: ../../Pacco.Services.OrderMaker
+    container_name: ordermaker-service
+    restart: unless-stopped
+    ports:
+      - 5015:5000
+    networks:
+      - pacco
+
   parcels-service:
     build: ../../Pacco.Services.Parcels
     container_name: parcels-service

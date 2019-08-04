@@ -35,6 +35,10 @@ scrape_configs:
     static_configs:
       - targets: ['orders-service:5000']
 
+  - job_name: 'ordermaker-service'
+    static_configs:
+      - targets: ['ordermaker-service:5000']
+
   - job_name: 'parcels-service'
     static_configs:
       - targets: ['parcels-service:5000']
