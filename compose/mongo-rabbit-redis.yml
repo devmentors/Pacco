@@ -2,7 +2,7 @@ version: "3.5"
 
 services:
   mongo:
-    image: mongo:4
+    image: mongo
     container_name: mongo
     restart: unless-stopped
     ports:
@@ -21,8 +21,8 @@ services:
       - 15672:15672
     networks:
       - pacco
-    volumes: 
-      - rabbitmq:/var/lib/rabbitmq
+    # volumes: 
+    #   - rabbitmq:/var/lib/rabbitmq
 
   redis:
     image: redis
@@ -42,7 +42,7 @@ networks:
 volumes:
   mongo:
     driver: local
-  rabbitmq:
-    driver: local
+  # rabbitmq:
+  #   driver: local
   redis:
     driver: local

@@ -9,8 +9,8 @@ services:
       - 8500:8500
     networks:
       - pacco
-    volumes:
-      - consul:/consul/data
+    # volumes:
+    #   - consul:/consul/data
 
   fabio:
     image: fabiolb/fabio
@@ -43,6 +43,6 @@ networks:
     name: pacco-network
     external: true
 
-volumes:
-  consul:
-    driver: local
+# volumes:
+#   consul:
+#     driver: local

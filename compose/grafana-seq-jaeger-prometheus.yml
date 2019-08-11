@@ -9,20 +9,19 @@ services:
       - 3000:3000
     networks:
       - pacco
-    volumes:
-      - grafana:/var/lib/grafana
+    # volumes:
+    #   - grafana:/var/lib/grafana
 
   prometheus:
-    image: prom/prometheus
+    build: ./prometheus
     container_name: prometheus
     restart: unless-stopped
     ports:
       - '9090:9090'
     networks:
       - pacco
-    volumes:
-      - prometheus:/prometheus
-      - ${PWD}/prometheus.yml:/etc/prometheus/prometheus.yml
+    # volumes:
+    #   - prometheus:/prometheus
 
   jaeger:
     image: jaegertracing/all-in-one
@@ -39,15 +38,28 @@ services:
     networks:
       - pacco
 
+  seq:
+    image: datalust/seq 
+    container_name: seq
+    restart: unless-stopped
+    environment:
+      - ACCEPT_EULA=Y
+    ports:
+      - 5341:80
+    networks:
+      - pacco
+    # volumes: 
+    #   - seq:/data
+
 networks:
   pacco:
-    name: pacco
+    name: pacco-network
     external: true
 
-volumes:
-  grafana:
-    driver: local
-  influxdb:
-    driver: local
-  prometheus:
-    driver: local
+# volumes:
+#   grafana:
+#     driver: local
+#   prometheus:
+#     driver: local
+#   seq:
+#     driver: local

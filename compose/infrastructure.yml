@@ -9,8 +9,8 @@ services:
       - 8500:8500
     networks:
       - pacco
-    volumes:
-      - consul:/consul/data
+    # volumes:
+    #   - consul:/consul/data
 
   fabio:
     image: fabiolb/fabio
@@ -32,8 +32,8 @@ services:
       - 3000:3000
     networks:
       - pacco
-    volumes:
-      - grafana:/var/lib/grafana
+    # volumes:
+    #   - grafana:/var/lib/grafana
 
   jaeger:
     image: jaegertracing/all-in-one
@@ -69,8 +69,8 @@ services:
       - '9090:9090'
     networks:
       - pacco
-    volumes:
-      - prometheus:/prometheus
+    # volumes:
+    #   - prometheus:/prometheus
 
   rabbitmq:
     image: rabbitmq:3-management
@@ -81,8 +81,8 @@ services:
       - 15672:15672
     networks:
       - pacco
-    volumes: 
-      - rabbitmq:/var/lib/rabbitmq
+    # volumes: 
+    #   - rabbitmq:/var/lib/rabbitmq
 
   redis:
     image: redis
@@ -105,8 +105,8 @@ services:
       - 5341:80
     networks:
       - pacco
-    volumes: 
-      - seq:/data
+    # volumes: 
+    #   - seq:/data
 
   vault:
     image: vault
@@ -127,18 +127,18 @@ networks:
     name: pacco-network
 
 volumes:
-  consul:
-    driver: local
-  grafana:
-    driver: local
+  # consul:
+  #   driver: local
+  # grafana:
+  #   driver: local
   mongo:
     driver: local
-  prometheus:
-    driver: local
-  rabbitmq:
-    driver: local
+  # prometheus:
+  #   driver: local
+  # rabbitmq:
+  #   driver: local
   redis:
     driver: local
-  seq:
-    driver: local
+  # seq:
+  #   driver: local
   
