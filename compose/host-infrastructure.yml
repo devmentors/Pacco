@@ -5,10 +5,7 @@ services:
     image: consul
     container_name: consul
     restart: unless-stopped
-    networks:
-      - pacco
-    ports:
-      - 8500:8500
+    network_mode: host
     # volumes:
     #   - consul:/consul/data
 
@@ -17,21 +14,14 @@ services:
     container_name: fabio
     restart: unless-stopped
     environment:
-    - FABIO_REGISTRY_CONSUL_ADDR=consul:8500
-    networks:
-      - pacco
-    ports:
-    - 9998:9998
-    - 9999:9999
+    - FABIO_REGISTRY_CONSUL_ADDR=localhost:8500
+    network_mode: host
 
   grafana:
     image: grafana/grafana
     container_name: grafana
     restart: unless-stopped
-    networks:
-      - pacco
-    ports:
-      - 3000:3000
+    network_mode: host
     # volumes:
     #   - grafana:/var/lib/grafana
 
@@ -39,36 +29,21 @@ services:
     image: jaegertracing/all-in-one
     container_name: jaeger
     restart: unless-stopped
-    networks:
-      - pacco
-    ports:
-      - 5775:5775/udp
-      - 5778:5778
-      - 6831:6831/udp
-      - 6832:6832/udp
-      - 9411:9411
-      - 14268:14268
-      - 16686:16686
+    network_mode: host
 
   mongo:
     image: mongo
     container_name: mongo
     restart: unless-stopped
-    networks:
-      - pacco
-    ports:
-      - 27017:27017
+    network_mode: host
     volumes:
       - mongo:/data/db
 
   prometheus:
-    build: ./prometheus
+    build: ./host-prometheus
     container_name: prometheus
     restart: unless-stopped
-    networks:
-      - pacco
-    ports:
-      - 9090:9090
+    network_mode: host
     # volumes:
     #   - prometheus:/prometheus
 
@@ -76,11 +51,7 @@ services:
     image: rabbitmq:3-management
     container_name: rabbitmq
     restart: unless-stopped
-    networks:
-      - pacco
-    ports:
-      - 5672:5672
-      - 15672:15672
+    network_mode: host
     # volumes: 
     #   - rabbitmq:/var/lib/rabbitmq
 
@@ -88,10 +59,7 @@ services:
     image: redis
     container_name: redis
     restart: unless-stopped
-    networks:
-      - pacco
-    ports:
-      - 6379:6379
+    network_mode: host
     volumes: 
       - redis:/data
 
@@ -101,10 +69,7 @@ services:
     restart: unless-stopped
     environment:
       - ACCEPT_EULA=Y
-    networks:
-      - pacco
-    ports:
-      - 5341:80
+    network_mode: host
     # volumes: 
     #   - seq:/data
 
@@ -117,14 +82,7 @@ services:
       - VAULT_DEV_ROOT_TOKEN_ID=secret
     cap_add:
       - IPC_LOCK
-    networks:
-      - pacco
-    ports:
-      - 8200:8200
-
-networks:
-  pacco:
-    name: pacco-network
+    network_mode: host
 
 volumes:
   # consul:
