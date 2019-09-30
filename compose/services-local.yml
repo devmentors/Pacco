@@ -5,7 +5,8 @@ services:
     build: ../../Pacco.APIGateway
     container_name: api
     restart: unless-stopped
-    command: ntrada.docker.yml
+    environment:
+      - NTRADA_CONFIG=ntrada.docker.yml
     ports:
       - 5000:5000
     networks:
