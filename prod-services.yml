@@ -1,61 +1,61 @@
 apps:
   - name: api
     script: dotnet Pacco.APIGateway.dll
-    cwd: ../Pacco.APIGateway/src/Pacco.APIGateway/bin/release/netcoreapp2.2/publish
+    cwd: ../Pacco.APIGateway/src/Pacco.APIGateway/bin/release/netcoreapp3.0/publish
     max_restarts: 3
     env:
       ASPNETCORE_URLS: http://*:5000
   - name: availability
     script: dotnet Pacco.Services.Availability.Api.dll
-    cwd: ../Pacco.Services.Availability/src/Pacco.Services.Availability.Api/bin/release/netcoreapp2.2/publish
+    cwd: ../Pacco.Services.Availability/src/Pacco.Services.Availability.Api/bin/release/netcoreapp3.0/publish
     max_restarts: 3
     env:
       ASPNETCORE_URLS: http://*:5001    
   - name: customers
     script: dotnet Pacco.Services.Customers.Api.dll
-    cwd: ../Pacco.Services.Customers/src/Pacco.Services.Customers.Api/bin/release/netcoreapp2.2/publish
+    cwd: ../Pacco.Services.Customers/src/Pacco.Services.Customers.Api/bin/release/netcoreapp3.0/publish
     max_restarts: 3
     env:
       ASPNETCORE_URLS: http://*:5002
   - name: deliveries
     script: dotnet Pacco.Services.Deliveries.Api.dll
-    cwd: ../Pacco.Services.Deliveries/src/Pacco.Services.Deliveries.Api/bin/release/netcoreapp2.2/publish
+    cwd: ../Pacco.Services.Deliveries/src/Pacco.Services.Deliveries.Api/bin/release/netcoreapp3.0/publish
     max_restarts: 3
     env:
       ASPNETCORE_URLS: http://*:5003
   - name: identity
     script: dotnet Pacco.Services.Identity.Api.dll
-    cwd: ../Pacco.Services.Identity/src/Pacco.Services.Identity.Api/bin/release/netcoreapp2.2/publish
+    cwd: ../Pacco.Services.Identity/src/Pacco.Services.Identity.Api/bin/release/netcoreapp3.0/publish
     max_restarts: 3
     env:
       ASPNETCORE_URLS: http://*:5004
   - name: operations
     script: dotnet Pacco.Services.Operations.Api.dll
-    cwd: ../Pacco.Services.Operations/src/Pacco.Services.Operations.Api/bin/release/netcoreapp2.2/publish
+    cwd: ../Pacco.Services.Operations/src/Pacco.Services.Operations.Api/bin/release/netcoreapp3.0/publish
     max_restarts: 3
     env:
       ASPNETCORE_URLS: http://*:5005
   - name: orders
     script: dotnet Pacco.Services.Orders.Api.dll
-    cwd: ../Pacco.Services.Orders/src/Pacco.Services.Orders.Api/bin/release/netcoreapp2.2/publish
+    cwd: ../Pacco.Services.Orders/src/Pacco.Services.Orders.Api/bin/release/netcoreapp3.0/publish
     max_restarts: 3
     env:
       ASPNETCORE_URLS: http://*:5006
   - name: parcels
     script: dotnet Pacco.Services.Parcels.Api.dll
-    cwd: ../Pacco.Services.Parcels/src/Pacco.Services.Parcels.Api/bin/release/netcoreapp2.2/publish
+    cwd: ../Pacco.Services.Parcels/src/Pacco.Services.Parcels.Api/bin/release/netcoreapp3.0/publish
     max_restarts: 3
     env:
       ASPNETCORE_URLS: http://*:5007
   - name: pricing
     script: dotnet Pacco.Services.Pricing.Api.dll
-    cwd: ../Pacco.Services.Pricing/src/Pacco.Services.Pricing.Api/bin/release/netcoreapp2.2/publish
+    cwd: ../Pacco.Services.Pricing/src/Pacco.Services.Pricing.Api/bin/release/netcoreapp3.0/publish
     max_restarts: 3
     env:
       ASPNETCORE_URLS: http://*:5008
   - name: vehicles
     script: dotnet Pacco.Services.Vehicles.Api.dll
-    cwd: ../Pacco.Services.Vehicles/src/Pacco.Services.Vehicles.Api/bin/release/netcoreapp2.2/publish
+    cwd: ../Pacco.Services.Vehicles/src/Pacco.Services.Vehicles.Api/bin/release/netcoreapp3.0/publish
     max_restarts: 3
     env:
       ASPNETCORE_URLS: http://*:5009
