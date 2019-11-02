@@ -7,9 +7,9 @@ scrape_configs:
     static_configs:
       - targets: ['prometheus:9090']
 
-  - job_name: 'api'
+  - job_name: 'api-gateway'
     static_configs:
-      - targets: ['api:5000']
+      - targets: ['api-gateway:5000']
 
   - job_name: 'availability-service'
     static_configs:
