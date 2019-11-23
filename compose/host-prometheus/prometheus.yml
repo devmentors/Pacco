@@ -7,7 +7,7 @@ scrape_configs:
     static_configs:
       - targets: ['localhost:9090']
 
-  - job_name: 'api-gateway'
+  - job_name: 'api'
     static_configs:
       - targets: ['localhost:5000']
 
