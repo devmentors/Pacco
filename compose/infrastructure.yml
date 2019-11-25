@@ -73,7 +73,7 @@ services:
     #   - prometheus:/prometheus
 
   rabbitmq:
-    image: rabbitmq:3-management
+    build: ./rabbitmq
     container_name: rabbitmq
     restart: unless-stopped
     networks:
