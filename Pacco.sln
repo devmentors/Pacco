@@ -85,7 +85,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Availability
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Availability.Infrastructure", "..\Pacco.Services.Availability\src\Pacco.Services.Availability.Infrastructure\Pacco.Services.Availability.Infrastructure.csproj", "{5C4BC235-1E90-4198-B375-609D253EBAF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Availability.IntegrationTests", "..\Pacco.Services.Availability\tests\Pacco.Services.Availability.IntegrationTests\Pacco.Services.Availability.IntegrationTests.csproj", "{387A2156-11B0-44AC-9392-2826E42ED3D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Availability.Tests.Integration", "..\Pacco.Services.Availability\tests\Pacco.Services.Availability.Tests.Integration\Pacco.Services.Availability.Tests.Integration.csproj", "{387A2156-11B0-44AC-9392-2826E42ED3D8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Orders.PactConsumerTests", "..\Pacco.Services.Orders\tests\Pacco.Services.Orders.PactConsumerTests\Pacco.Services.Orders.PactConsumerTests.csproj", "{5C5E2C0B-87C9-495E-AEA3-3ACBAD314094}"
 EndProject
@@ -140,6 +140,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0C74F8AE-DCF3-4AC4-B352-17EB0AF00C6B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Operations.GrpcClient", "..\Pacco.Services.Operations\src\Pacco.Services.Operations.GrpcClient\Pacco.Services.Operations.GrpcClient.csproj", "{41EA283C-F724-4BF8-BAD2-B81D29CFAC62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Availability.Tests.EndToEnd", "..\Pacco.Services.Availability\tests\Pacco.Services.Availability.Tests.EndToEnd\Pacco.Services.Availability.Tests.EndToEnd.csproj", "{54AE8CA7-715F-4E19-83F1-986F463BEC8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Availability.Tests.Unit", "..\Pacco.Services.Availability\tests\Pacco.Services.Availability.Tests.Unit\Pacco.Services.Availability.Tests.Unit.csproj", "{E50EC731-1ED4-4DC6-8C24-F1C1A4B47E0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Availability.Tests.Performance", "..\Pacco.Services.Availability\tests\Pacco.Services.Availability.Tests.Performance\Pacco.Services.Availability.Tests.Performance.csproj", "{9F5C2BB1-A199-45B2-97E6-72137684236B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -586,6 +592,42 @@ Global
 		{41EA283C-F724-4BF8-BAD2-B81D29CFAC62}.Release|x64.Build.0 = Release|Any CPU
 		{41EA283C-F724-4BF8-BAD2-B81D29CFAC62}.Release|x86.ActiveCfg = Release|Any CPU
 		{41EA283C-F724-4BF8-BAD2-B81D29CFAC62}.Release|x86.Build.0 = Release|Any CPU
+		{54AE8CA7-715F-4E19-83F1-986F463BEC8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54AE8CA7-715F-4E19-83F1-986F463BEC8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54AE8CA7-715F-4E19-83F1-986F463BEC8E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{54AE8CA7-715F-4E19-83F1-986F463BEC8E}.Debug|x64.Build.0 = Debug|Any CPU
+		{54AE8CA7-715F-4E19-83F1-986F463BEC8E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{54AE8CA7-715F-4E19-83F1-986F463BEC8E}.Debug|x86.Build.0 = Debug|Any CPU
+		{54AE8CA7-715F-4E19-83F1-986F463BEC8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54AE8CA7-715F-4E19-83F1-986F463BEC8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54AE8CA7-715F-4E19-83F1-986F463BEC8E}.Release|x64.ActiveCfg = Release|Any CPU
+		{54AE8CA7-715F-4E19-83F1-986F463BEC8E}.Release|x64.Build.0 = Release|Any CPU
+		{54AE8CA7-715F-4E19-83F1-986F463BEC8E}.Release|x86.ActiveCfg = Release|Any CPU
+		{54AE8CA7-715F-4E19-83F1-986F463BEC8E}.Release|x86.Build.0 = Release|Any CPU
+		{E50EC731-1ED4-4DC6-8C24-F1C1A4B47E0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E50EC731-1ED4-4DC6-8C24-F1C1A4B47E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E50EC731-1ED4-4DC6-8C24-F1C1A4B47E0A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E50EC731-1ED4-4DC6-8C24-F1C1A4B47E0A}.Debug|x64.Build.0 = Debug|Any CPU
+		{E50EC731-1ED4-4DC6-8C24-F1C1A4B47E0A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E50EC731-1ED4-4DC6-8C24-F1C1A4B47E0A}.Debug|x86.Build.0 = Debug|Any CPU
+		{E50EC731-1ED4-4DC6-8C24-F1C1A4B47E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E50EC731-1ED4-4DC6-8C24-F1C1A4B47E0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E50EC731-1ED4-4DC6-8C24-F1C1A4B47E0A}.Release|x64.ActiveCfg = Release|Any CPU
+		{E50EC731-1ED4-4DC6-8C24-F1C1A4B47E0A}.Release|x64.Build.0 = Release|Any CPU
+		{E50EC731-1ED4-4DC6-8C24-F1C1A4B47E0A}.Release|x86.ActiveCfg = Release|Any CPU
+		{E50EC731-1ED4-4DC6-8C24-F1C1A4B47E0A}.Release|x86.Build.0 = Release|Any CPU
+		{9F5C2BB1-A199-45B2-97E6-72137684236B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F5C2BB1-A199-45B2-97E6-72137684236B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F5C2BB1-A199-45B2-97E6-72137684236B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9F5C2BB1-A199-45B2-97E6-72137684236B}.Debug|x64.Build.0 = Debug|Any CPU
+		{9F5C2BB1-A199-45B2-97E6-72137684236B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9F5C2BB1-A199-45B2-97E6-72137684236B}.Debug|x86.Build.0 = Debug|Any CPU
+		{9F5C2BB1-A199-45B2-97E6-72137684236B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F5C2BB1-A199-45B2-97E6-72137684236B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F5C2BB1-A199-45B2-97E6-72137684236B}.Release|x64.ActiveCfg = Release|Any CPU
+		{9F5C2BB1-A199-45B2-97E6-72137684236B}.Release|x64.Build.0 = Release|Any CPU
+		{9F5C2BB1-A199-45B2-97E6-72137684236B}.Release|x86.ActiveCfg = Release|Any CPU
+		{9F5C2BB1-A199-45B2-97E6-72137684236B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3516DE00-9F06-4659-BC78-D9DA768CB114} = {175382DE-404D-4400-AEC7-F7F8A15C7766}
@@ -646,5 +688,8 @@ Global
 		{A34B93A5-1843-4366-9DEE-EEC0D7C85C12} = {EAB2B57F-7E18-4E4D-AD10-19BDBC3232F1}
 		{0C74F8AE-DCF3-4AC4-B352-17EB0AF00C6B} = {448D723B-5318-4EBF-8050-96FAEF05FB65}
 		{41EA283C-F724-4BF8-BAD2-B81D29CFAC62} = {FFFC59D7-8AC3-4B28-974B-805800B92BB9}
+		{E50EC731-1ED4-4DC6-8C24-F1C1A4B47E0A} = {08F55CC2-C026-491D-8B5D-D2CEBA5D230C}
+		{54AE8CA7-715F-4E19-83F1-986F463BEC8E} = {08F55CC2-C026-491D-8B5D-D2CEBA5D230C}
+		{9F5C2BB1-A199-45B2-97E6-72137684236B} = {08F55CC2-C026-491D-8B5D-D2CEBA5D230C}
 	EndGlobalSection
 EndGlobal
