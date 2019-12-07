@@ -6,7 +6,7 @@ services:
     container_name: api-gateway
     restart: unless-stopped
     environment:
-      - NTRADA_CONFIG=ntrada.docker.yml
+      - NTRADA_CONFIG=ntrada-async.docker.yml
     ports:
       - 5000:5000
     networks:
@@ -65,6 +65,15 @@ services:
       - 5006:5000
     networks:
       - pacco
+    depends_on:
+      - availability-service
+      - customers-service
+      - deliveries-service
+      - identity-service
+      - orders-service
+      - ordermaker-service
+      - parcels-service
+      - vehicles-service
 
   ordermaker-service:
     image: devmentors/pacco.services.ordermaker

@@ -56,6 +56,15 @@ services:
       - 5005:5000
     networks:
       - pacco
+    depends_on:
+      - availability-service
+      - customers-service
+      - deliveries-service
+      - identity-service
+      - orders-service
+      - ordermaker-service
+      - parcels-service
+      - vehicles-service
 
   orders-service:
     build: ../../Pacco.Services.Orders
