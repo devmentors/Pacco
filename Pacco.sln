@@ -147,6 +147,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Availability
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Availability.Tests.Performance", "..\Pacco.Services.Availability\tests\Pacco.Services.Availability.Tests.Performance\Pacco.Services.Availability.Tests.Performance.csproj", "{9F5C2BB1-A199-45B2-97E6-72137684236B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pacco.Services.Availability.Tests.Shared", "..\Pacco.Services.Availability\tests\Pacco.Services.Availability.Tests.Shared\Pacco.Services.Availability.Tests.Shared.csproj", "{D20C1733-D340-40C5-AD59-320BE8E13685}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -628,6 +630,18 @@ Global
 		{9F5C2BB1-A199-45B2-97E6-72137684236B}.Release|x64.Build.0 = Release|Any CPU
 		{9F5C2BB1-A199-45B2-97E6-72137684236B}.Release|x86.ActiveCfg = Release|Any CPU
 		{9F5C2BB1-A199-45B2-97E6-72137684236B}.Release|x86.Build.0 = Release|Any CPU
+		{D20C1733-D340-40C5-AD59-320BE8E13685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D20C1733-D340-40C5-AD59-320BE8E13685}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D20C1733-D340-40C5-AD59-320BE8E13685}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D20C1733-D340-40C5-AD59-320BE8E13685}.Debug|x64.Build.0 = Debug|Any CPU
+		{D20C1733-D340-40C5-AD59-320BE8E13685}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D20C1733-D340-40C5-AD59-320BE8E13685}.Debug|x86.Build.0 = Debug|Any CPU
+		{D20C1733-D340-40C5-AD59-320BE8E13685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D20C1733-D340-40C5-AD59-320BE8E13685}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D20C1733-D340-40C5-AD59-320BE8E13685}.Release|x64.ActiveCfg = Release|Any CPU
+		{D20C1733-D340-40C5-AD59-320BE8E13685}.Release|x64.Build.0 = Release|Any CPU
+		{D20C1733-D340-40C5-AD59-320BE8E13685}.Release|x86.ActiveCfg = Release|Any CPU
+		{D20C1733-D340-40C5-AD59-320BE8E13685}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3516DE00-9F06-4659-BC78-D9DA768CB114} = {175382DE-404D-4400-AEC7-F7F8A15C7766}
@@ -691,5 +705,6 @@ Global
 		{E50EC731-1ED4-4DC6-8C24-F1C1A4B47E0A} = {08F55CC2-C026-491D-8B5D-D2CEBA5D230C}
 		{54AE8CA7-715F-4E19-83F1-986F463BEC8E} = {08F55CC2-C026-491D-8B5D-D2CEBA5D230C}
 		{9F5C2BB1-A199-45B2-97E6-72137684236B} = {08F55CC2-C026-491D-8B5D-D2CEBA5D230C}
+		{D20C1733-D340-40C5-AD59-320BE8E13685} = {08F55CC2-C026-491D-8B5D-D2CEBA5D230C}
 	EndGlobalSection
 EndGlobal
