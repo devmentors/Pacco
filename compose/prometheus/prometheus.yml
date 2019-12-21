@@ -9,47 +9,47 @@ scrape_configs:
 
   - job_name: 'api-gateway'
     static_configs:
-      - targets: ['api-gateway:5000']
+      - targets: ['api-gateway']
 
   - job_name: 'availability-service'
     static_configs:
-      - targets: ['availability-service:5000']
+      - targets: ['availability-service']
 
   - job_name: 'customers-service'
     static_configs:
-      - targets: ['customers-service:5000']
+      - targets: ['customers-service']
 
   - job_name: 'deliveries-service'
     static_configs:
-      - targets: ['deliveries-service:5000']
+      - targets: ['deliveries-service']
 
   - job_name: 'identity-service'
     static_configs:
-      - targets: ['identity-service:5000']
+      - targets: ['identity-service']
 
   - job_name: 'operations-service'
     static_configs:
-      - targets: ['operations-service:5000']
+      - targets: ['operations-service']
 
   - job_name: 'orders-service'
     static_configs:
-      - targets: ['orders-service:5000']
+      - targets: ['orders-service']
 
   - job_name: 'ordermaker-service'
     static_configs:
-      - targets: ['ordermaker-service:5000']
+      - targets: ['ordermaker-service']
 
   - job_name: 'parcels-service'
     static_configs:
-      - targets: ['parcels-service:5000']
+      - targets: ['parcels-service']
       
   - job_name: 'pricing-service'
     static_configs:
-      - targets: ['pricing-service:5000']
+      - targets: ['pricing-service']
 
   - job_name: 'vehicles-service'
     static_configs:
-      - targets: ['vehicles-service:5000']
+      - targets: ['vehicles-service']
 
   - job_name: 'rabbitmq'
     static_configs:

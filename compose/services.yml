@@ -1,4 +1,4 @@
-version: "3.5"
+version: "3.7"
 
 services:
   api-gateway:
@@ -8,7 +8,7 @@ services:
     environment:
       - NTRADA_CONFIG=ntrada-async.docker.yml
     ports:
-      - 5000:5000
+      - 5000:80
     networks:
       - pacco
 
@@ -17,7 +17,7 @@ services:
     container_name: availability-service
     restart: unless-stopped
     ports:
-      - 5001:5000 
+      - 5001:80 
     networks:
       - pacco
 
@@ -26,7 +26,7 @@ services:
     container_name: customers-service
     restart: unless-stopped
     ports:
-      - 5002:5000
+      - 5002:80
     networks:
       - pacco
 
@@ -35,7 +35,7 @@ services:
     container_name: deliveries-service
     restart: unless-stopped
     ports:
-      - 5003:5000
+      - 5003:80
     networks:
       - pacco
 
@@ -44,7 +44,7 @@ services:
     container_name: identity-service
     restart: unless-stopped
     ports:
-      - 5004:5000
+      - 5004:80
     networks:
       - pacco
 
@@ -53,7 +53,7 @@ services:
     container_name: operations-service
     restart: unless-stopped
     ports:
-      - 5005:5000
+      - 5005:80
     networks:
       - pacco
 
@@ -62,7 +62,7 @@ services:
     container_name: orders-service
     restart: unless-stopped
     ports:
-      - 5006:5000
+      - 5006:80
     networks:
       - pacco
     depends_on:
@@ -80,7 +80,7 @@ services:
     container_name: ordermaker-service
     restart: unless-stopped
     ports:
-      - 5015:5000
+      - 5015:80
     networks:
       - pacco
 
@@ -89,7 +89,7 @@ services:
     container_name: parcels-service
     restart: unless-stopped
     ports:
-      - 5007:5000
+      - 5007:80
     networks:
       - pacco
 
@@ -98,7 +98,7 @@ services:
     container_name: pricing-service
     restart: unless-stopped
     ports:
-      - 5008:5000
+      - 5008:80
     networks:
       - pacco
 
@@ -107,7 +107,7 @@ services:
     container_name: vehicles-service
     restart: unless-stopped
     ports:
-      - 5009:5000
+      - 5009:80
     networks:
       - pacco
 
