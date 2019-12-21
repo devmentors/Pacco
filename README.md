@@ -34,3 +34,9 @@ The above repositories can be also cloned via [git-clone.sh](https://github.com/
 **How to start the solution?**
 
 Open `Pacco/compose` directory and execute `docker-compose -f infrastructure.yml build` and then `docker-compose -f infrastructure.yml up -d` - it will start the required infrastructure in the background. Then, you can start the services independently of each other via `dotnet run` command in each microservice repository or run them all at once using Docker, by executing `docker-compose -f services-local.yml build` and `docker-compose -f services-local.yml up` commands in the console.
+
+**What HTTP requests can be sent to the API?**
+----------------
+
+You can find the list of all HTTP requests in `Pacco-sample-scenario.rest` file placed in the root folder of [Pacco.APIGateway](https://github.com/devmentors/Pacco.APIGateway) repository ([here](https://github.com/devmentors/Pacco.APIGateway/blob/master/Pacco-sample-scenario.rest)). 
+This file is compatible with [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) plugin for [Visual Studio Code](https://code.visualstudio.com). 
