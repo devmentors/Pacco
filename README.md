@@ -7,10 +7,16 @@ Pacco is an open source project using microservices architecture written in .NET
 
 The overall solution uses the cloud agnostic tools and most of them can be found under [cncf.io](https://cncf.io). To easily plug into the complex infrastructure, [Convey](https://convey-stack.github.io) is being used. The whole project is created and maintained by [devmentors.io](https://devmentors.io).
 
+![Infrastructure](https://raw.githubusercontent.com/devmentors/Pacco/master/assets/infrastructure.png)
+
 Depending on the particular microservice complexity, either the clean architecture + DDD approach (as presented below) is used or another style that is the best fit.
 
 ![Clean architecture](https://raw.githubusercontent.com/devmentors/Pacco/master/assets/clean_architecture.png)
 
+The solution does use an event-driven approach in order to asynchronously integrate between the microservices.
+The general overview is presented below.
+
+![Pacco overview](https://raw.githubusercontent.com/devmentors/Pacco/master/assets/pacco_overview.png)
 
 **Which repositories should I clone?**
 ----------------
