@@ -6,7 +6,7 @@ services:
     container_name: api-gateway
     restart: unless-stopped
     environment:
-      - NTRADA_CONFIG=ntrada.docker.yml
+      - NTRADA_CONFIG=ntrada.docker
     ports:
       - 5000:80
     networks:
