@@ -56,15 +56,6 @@ services:
       - 5005:80
     networks:
       - pacco
-
-  orders-service:
-    image: devmentors/pacco.services.orders
-    container_name: orders-service
-    restart: unless-stopped
-    ports:
-      - 5006:80
-    networks:
-      - pacco
     depends_on:
       - availability-service
       - customers-service
@@ -74,6 +65,15 @@ services:
       - ordermaker-service
       - parcels-service
       - vehicles-service
+
+  orders-service:
+    image: devmentors/pacco.services.orders
+    container_name: orders-service
+    restart: unless-stopped
+    ports:
+      - 5006:80
+    networks:
+      - pacco
 
   ordermaker-service:
     image: devmentors/pacco.services.ordermaker
