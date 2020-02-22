@@ -48,14 +48,12 @@ The above repositories can be also cloned via [git-clone.sh](https://github.com/
 Open `Pacco/compose` directory and execute:
 
 ```
-docker-compose -f infrastructure.yml build
 docker-compose -f infrastructure.yml up -d
 ```
 
 It will start the required infrastructure in the background. Then, you can start the services independently of each other via `dotnet run` or `./scripts/start.sh` command in each microservice repository or run them all at once using Docker:
 
 ```
-docker-compose -f services-local.yml build
 docker-compose -f services-local.yml up
 ```
 
