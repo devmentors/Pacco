@@ -35,6 +35,9 @@ services:
     image: mongo
     container_name: mongo
     restart: unless-stopped
+    # environment:
+    #   - MONGO_INITDB_ROOT_USERNAME=root
+    #   - MONGO_INITDB_ROOT_PASSWORD=secret
     network_mode: host
     volumes:
       - mongo:/data/db
