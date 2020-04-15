@@ -1,5 +1,5 @@
 #!/bin/bash
-REPOSITORIES=(Pacco.APIGateway Pacco.Services.Availability Pacco.Services.Customers Pacco.Services.Deliveries Pacco.Services.Identity Pacco.Services.Operations Pacco.Services.Orders Pacco.Services.OrderMaker Pacco.Services.Parcels Pacco.Services.Pricing Pacco.Services.Vehicles)
+REPOSITORIES=(Pacco.APIGateway Pacco.APIGateway.Ocelot Pacco.Services.Availability Pacco.Services.Customers Pacco.Services.Deliveries Pacco.Services.Identity Pacco.Services.Operations Pacco.Services.Orders Pacco.Services.OrderMaker Pacco.Services.Parcels Pacco.Services.Pricing Pacco.Services.Vehicles)
 
 for REPOSITORY in ${REPOSITORIES[*]}
 do
