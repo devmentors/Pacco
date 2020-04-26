@@ -267,6 +267,55 @@ vault kv enable-versioning secret
 # Restart the app - now it will load the settings from secret Vault storage.
 
 
+===========================================================================================================================
+VAULT SECRETS
+===========================================================================================================================
+
+# DATABASE https://www.vaultproject.io/docs/secrets/databases
+
+vault secrets enable database
+
+vault write database/config/mongodb \
+     plugin_name=mongodb-database-plugin \
+     allowed_roles="availability-service" \g
+     connection_url="mongodb://{{username}}:{{password}}@mongo:27017" \
+     username="root" \
+     password="secret"
+
+
+vault write database/roles/availability-service \
+     db_name=mongodb \
+     creation_statements='{ "db": "admin", "roles": [{"role": "readWrite", "db": "availability-service"}] }' \
+     default_ttl="1h" \
+     max_ttl="24h"
+
+
+# PKI https://www.vaultproject.io/docs/secrets/pki
+
+
+vault secrets enable pki
+
+vault write pki/root/generate/internal \
+    common_name=pacco.io \2
+    ttl=87600h > CA_cert.crt
+
+vault delete pki/root
+
+
+vault write pki/config/urls \
+    issuing_certificates="http://localhost:8200/v1/pki/ca" \
+    crl_distribution_points="http://localhost:8200/v1/pki/crl"
+
+
+vault write pki/roles/availability-service \
+    allowed_domains=pacco.io \
+    allow_localhost=true \
+    allow_subdomains=true \
+    max_ttl=72h
+
+
+vault write pki/issue/availability-service \
+    common_name=availability-service.pacco.io
 
 ===========================================================================================================================
 *** MONITORING ***
