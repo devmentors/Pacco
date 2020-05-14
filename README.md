@@ -5,6 +5,8 @@
 
 Pacco is an open source project using microservices architecture written in .NET Core 3.1. The domain tackles an exclusive parcels delivery which revolves around the general concept of limited resources availability. Pacco does use an event-driven approach in order to asynchronously integrate between the microservices.
 
+Find out more about distributed systems patterns and practices in **[Microservices .NET online course](https://devmentors.io/courses/microservices-net)** and check out our **[article](https://devmentors.io/blog/hello-world-microservices-pacco)** about starting Pacco microservices and infrastructure.
+
 The solution is maintained by [devmentors.io](https://devmentors.io).
 
 ![Pacco overview](https://raw.githubusercontent.com/devmentors/Pacco/master/assets/pacco_overview.png)
