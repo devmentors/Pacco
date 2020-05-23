@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   api-gateway:
-    build: ../../Pacco.APIGateway
+    build: ../Pacco.APIGateway
     container_name: api-gateway
     restart: unless-stopped
     environment:
@@ -13,7 +13,7 @@ services:
       - pacco
 
   availability-service:
-    build: ../../Pacco.Services.Availability
+    build: ../Pacco.Services.Availability
     container_name: availability-service
     restart: unless-stopped
     ports:
@@ -22,7 +22,7 @@ services:
       - pacco
 
   customers-service:
-    build: ../../Pacco.Services.Customers
+    build: ../Pacco.Services.Customers
     container_name: customers-service
     restart: unless-stopped
     ports:
@@ -31,7 +31,7 @@ services:
       - pacco
 
   deliveries-service:
-    build: ../../Pacco.Services.Deliveries
+    build: ../Pacco.Services.Deliveries
     container_name: deliveries-service
     restart: unless-stopped
     ports:
@@ -40,7 +40,7 @@ services:
       - pacco
 
   identity-service:
-    build: ../../Pacco.Services.Identity
+    build: ../Pacco.Services.Identity
     container_name: identity-service
     restart: unless-stopped
     ports:
@@ -49,7 +49,7 @@ services:
       - pacco
 
   operations-service:
-    build: ../../Pacco.Services.Operations
+    build: ../Pacco.Services.Operations
     container_name: operations-service
     restart: unless-stopped
     ports:
@@ -67,7 +67,7 @@ services:
       - vehicles-service
 
   orders-service:
-    build: ../../Pacco.Services.Orders
+    build: ../Pacco.Services.Orders
     container_name: orders-service
     restart: unless-stopped
     ports:
@@ -76,7 +76,7 @@ services:
       - pacco
 
   ordermaker-service:
-    build: ../../Pacco.Services.OrderMaker
+    build: ../Pacco.Services.OrderMaker
     container_name: ordermaker-service
     restart: unless-stopped
     ports:
@@ -85,7 +85,7 @@ services:
       - pacco
 
   parcels-service:
-    build: ../../Pacco.Services.Parcels
+    build: ../Pacco.Services.Parcels
     container_name: parcels-service
     restart: unless-stopped
     ports:
@@ -94,7 +94,7 @@ services:
       - pacco
 
   pricing-service:
-    build: ../../Pacco.Services.Pricing
+    build: ../Pacco.Services.Pricing
     container_name: pricing-service
     restart: unless-stopped
     ports:
@@ -103,7 +103,7 @@ services:
       - pacco
 
   vehicles-service:
-    build: ../../Pacco.Services.Vehicles
+    build: ../Pacco.Services.Vehicles
     container_name: vehicles-service
     restart: unless-stopped
     ports:
