@@ -282,30 +282,25 @@ vault write database/config/mongodb \
      username="root" \
      password="secret"
 
-
 vault write database/roles/availability-service \
      db_name=mongodb \
      creation_statements='{ "db": "admin", "roles": [{"role": "readWrite", "db": "availability-service"}] }' \
      default_ttl="1h" \
      max_ttl="24h"
 
-
 # PKI https://www.vaultproject.io/docs/secrets/pki
-
 
 vault secrets enable pki
 
 vault write pki/root/generate/internal \
-    common_name=pacco.io \2
+    common_name=pacco.io \
     ttl=87600h > CA_cert.crt
 
 vault delete pki/root
 
-
 vault write pki/config/urls \
     issuing_certificates="http://localhost:8200/v1/pki/ca" \
     crl_distribution_points="http://localhost:8200/v1/pki/crl"
-
 
 vault write pki/roles/availability-service \
     allowed_domains=pacco.io \
@@ -313,9 +308,17 @@ vault write pki/roles/availability-service \
     allow_subdomains=true \
     max_ttl=72h
 
-
 vault write pki/issue/availability-service \
     common_name=availability-service.pacco.io
+
+vault write pki/roles/customers-service \
+  allowed_domains=pacco.io \
+  allow_localhost=true \
+  allow_subdomains=true \
+  max_ttl=72h
+
+vault write pki/issue/customers-service \
+    common_name=customers-service.pacco.io
 
 ===========================================================================================================================
 *** MONITORING ***
